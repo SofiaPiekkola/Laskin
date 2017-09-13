@@ -31,7 +31,7 @@ public class Utils {
             lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
         if (!lastChar.equals("/") || !buttonTxt.equals("0")) {
             curNum += buttonTxt;
-            activity.setCalculation(buttonTxt, true);
+            activity.setCalculationText(buttonTxt, true);
             calculate(activity.getCalculationText());
         } else {
             activity.createToast("Can't divide by 0");
@@ -46,7 +46,7 @@ public class Utils {
             lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
             if (!curNum.contains(",") && lastChar.matches("[0-9]")) {
                 curNum += buttonTxt;
-                activity.setCalculation(buttonTxt, true);
+                activity.setCalculationText(buttonTxt, true);
             }
         }
     }
@@ -59,11 +59,11 @@ public class Utils {
             lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
             if (lastChar.matches("[0-9,]")) {
                 curNum = "";
-                activity.setCalculation(buttonTxt, true);
+                activity.setCalculationText(buttonTxt, true);
                 calculate(activity.getCalculationText());
             } else {
                 String newTxt = activity.getCalculationText().substring(0, activity.getCalculationText().length() - 1) + buttonTxt;
-                activity.setCalculation(newTxt, false);
+                activity.setCalculationText(newTxt, false);
             }
         }
     }
@@ -77,7 +77,7 @@ public class Utils {
             lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
             if (lastChar.matches("[0-9,]") && curNum.length()>0) curNum = curNum.substring(0, curNum.length() - 1);
             if (activity.getCalculationText().length()>0)
-                activity.setCalculation(activity.getCalculationText().substring(0, activity.getCalculationText().length() - 1), false);
+                activity.setCalculationText(activity.getCalculationText().substring(0, activity.getCalculationText().length() - 1), false);
             if (activity.getCalculationText().length()>0)
                 calculate(activity.getCalculationText());
             else activity.setResultText("");
@@ -88,7 +88,7 @@ public class Utils {
     void reset() {
         if (calculated) {
             calculated = false;
-            activity.setCalculation("", false);
+            activity.setCalculationText("", false);
         } else calculated = false;
     }
 
@@ -108,7 +108,7 @@ public class Utils {
 
             if (lastChar.equals("=")) {
                 activity.setResultText("");
-                activity.setCalculation(String.valueOf(nf.format(resolved)), false);
+                activity.setCalculationText(String.valueOf(nf.format(resolved)), false);
                 calculated = true;
             }
         }
