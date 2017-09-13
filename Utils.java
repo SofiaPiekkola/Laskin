@@ -52,7 +52,7 @@ public class Utils {
     }
 
     // Responds to clicking +-/x=
-    public void CalculationClicked(String buttonTxt) {
+    public void calculationClicked(String buttonTxt) {
         String lastChar;
 
         if (activity.getCalculationText().length() > 0) {
