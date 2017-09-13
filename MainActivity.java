@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         utils.commaClicked(buttonTxt);
     }
 
-    public void CalculationClicked(View view) {
+    public void calculationClicked(View view) {
         Button b = (Button) findViewById(view.getId());
         String buttonTxt = b.getText().toString();
         utils.CalculationClicked(buttonTxt);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         scroll2.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
     }
 
-    public void setCalculation(String calculation, boolean append) {
+    public void setCalculationText(String calculation, boolean append) {
         if (append) this.calculation.append(calculation);
         else this.calculation.setText(calculation);
         scroll1.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
