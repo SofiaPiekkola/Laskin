@@ -4,10 +4,6 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-/**
- * Created by Sofia on 13.9.2017.
- */
-
 public class Utils {
     // Indicates whether user has pressed "="
     boolean calculated;
