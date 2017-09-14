@@ -28,6 +28,7 @@ class Utils {
     // Responds to clicking comma
     void commaClicked(String buttonTxt) {
         String lastChar;
+        reset();
 
         if (activity.getCalculationText().length() > 0) {
             lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
@@ -35,6 +36,9 @@ class Utils {
                 curNum += buttonTxt;
                 activity.setCalculationText(buttonTxt, true);
             }
+        }else if (!curNum.contains(",")) {
+            curNum += "0" + buttonTxt;
+            activity.setCalculationText("0" + buttonTxt, true);
         }
     }
 
@@ -63,7 +67,7 @@ class Utils {
             lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
             if (lastChar.matches("[0-9,]") && curNum.length() > 0)
                 curNum = curNum.substring(0, curNum.length() - 1);
-            if (activity.getCalculationText().length() > 0)
+            if (activity.getCalculationText().length() > 0) 
                 activity.setCalculationText(activity.getCalculationText().substring(0, activity.getCalculationText().length() - 1), false);
             if (activity.getCalculationText().length() > 0)
                 calculate(activity.getCalculationText());
@@ -96,15 +100,15 @@ class Utils {
             double resolved = e.evaluate();
             activity.setResultText(String.valueOf(nf.format(resolved)));
         } else if (lastChar.equals("=")) {
-            if (curNum.length() > 0) {
+            try{
                 Expression e = new ExpressionBuilder(calculate).build();
                 double resolved = e.evaluate();
                 activity.setResultText("");
                 activity.setCalculationText(String.valueOf(nf.format(resolved)), false);
                 calculated = true;
-            } else {
+            }catch (ArithmeticException e){
                 activity.setCalculationText(activity.getCalculationText().replace("=", ""), false);
-                activity.createToast("Can't divide by 0!");
+                activity.createToast("Cant divide with 0!");
             }
         } else curNum = "";
     }
