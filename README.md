@@ -8,7 +8,7 @@ ________________________________________________________________________________
 5) Palaa takaisin Androidiin navigaatio-valikosta (kts. kohta 4)
 6) Luo uusi Utils-niminen luokka samaan kansioon MainActivity luokan kanssa
 7) Poista Utilsista kaikki muu sisältö paitsi ensimmäiseltä riviltä löytyvä paketin osoite
-8) Kopioi Utils-luokkaan kaikki koodi Githubin Laskin-luokasta löytyvästä Utils.java tiedostosta, älä välitä virheistä
+8) Kopioi Utils-luokkaan kaikki koodi Githubin Laskin/java kansiosta löytyvästä Utils.java tiedostosta, älä välitä virheistä
 ________________________________________________________________________________________________________________________________________
 9) Aloitetaan koodi! Muokkaat tässä ainoastaan MainActivity-luokkaa ja kaikki ohjeet koskevat sitä.
 ________________________________________________________________________________________________________________________________________
