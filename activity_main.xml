@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sofia.laskin.MainActivity"
+    tools:context="com.sofia.laskin2.MainActivity"
     android:orientation="vertical">
 
     <HorizontalScrollView
@@ -14,11 +14,12 @@
         android:layout_weight="17">
         <TextView
             android:padding="10dp"
-            android:textSize="60sp"
+            android:textSize="@dimen/textSizeBig"
             android:layout_gravity="end"
             android:textAlignment="textEnd"
             android:maxLines = "1"
             android:id="@+id/mid"
+            android:freezesText="true"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
     </HorizontalScrollView>
@@ -30,16 +31,18 @@
         android:layout_weight="13">
         <TextView
             android:padding="10dp"
-            android:textSize="30sp"
+            android:textSize="@dimen/textSizeSmall"
             android:layout_gravity="end"
             android:textAlignment="textEnd"
             android:id="@+id/con"
             android:maxLines = "1"
+            android:freezesText="true"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
     </HorizontalScrollView>
 
     <LinearLayout
+        android:baselineAligned="false"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="70">
@@ -140,7 +143,7 @@
                 <Button
                     android:id="@+id/buttonOn"
                     android:text="="
-                    android:onClick="CalculationClicked"
+                    android:onClick="calculationClicked"
                     style="@style/buttonStyle" />
             </TableRow>
 
@@ -159,25 +162,25 @@
             <Button
                 android:id="@+id/numPl"
                 android:text="+"
-                android:onClick="CalculationClicked"
+                android:onClick="calculationClicked"
                 style="@style/buttonStyle2"/>
 
             <Button
                 android:id="@+id/numM"
                 android:text="-"
-                android:onClick="CalculationClicked"
+                android:onClick="calculationClicked"
                 style="@style/buttonStyle2"/>
 
             <Button
                 android:id="@+id/numX"
                 android:text="x"
-                android:onClick="CalculationClicked"
+                android:onClick="calculationClicked"
                 style="@style/buttonStyle2"/>
 
             <Button
                 android:id="@+id/numS"
                 android:text="/"
-                android:onClick="CalculationClicked"
+                android:onClick="calculationClicked"
                 style="@style/buttonStyle2" />
 
         </LinearLayout>
