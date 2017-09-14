@@ -4,36 +4,29 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-public class Utils {
+class Utils {
     // Indicates whether user has pressed "="
-    boolean calculated;
+    private boolean calculated;
     // Holds the last number user has entered
-    String curNum = "";
+    private String curNum = "";
     // Holds the main class
-    MainActivity activity;
+    private MainActivity activity;
 
-    public Utils(MainActivity activity) {
+    //Constructs the class
+    Utils(MainActivity activity) {
         this.activity = activity;
     }
 
     // Responds to clicking any number
-    public void numberClicked(String buttonTxt) {
-        String lastChar = "";
-
+    void numberClicked(String buttonTxt) {
         reset();
-        if (activity.getCalculationText().length() > 0)
-            lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
-        if (!lastChar.equals("/") || !buttonTxt.equals("0")) {
-            curNum += buttonTxt;
-            activity.setCalculationText(buttonTxt, true);
-            calculate(activity.getCalculationText());
-        } else {
-            activity.createToast("Can't divide by 0");
-        }
+        curNum += buttonTxt;
+        activity.setCalculationText(buttonTxt, true);
+        calculate(activity.getCalculationText());
     }
 
     // Responds to clicking comma
-    public void commaClicked(String buttonTxt) {
+    void commaClicked(String buttonTxt) {
         String lastChar;
 
         if (activity.getCalculationText().length() > 0) {
@@ -46,16 +39,15 @@ public class Utils {
     }
 
     // Responds to clicking +-/x=
-    public void calculationClicked(String buttonTxt) {
+    void calculationClicked(String buttonTxt) {
         String lastChar;
 
         if (activity.getCalculationText().length() > 0) {
             lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
             if (lastChar.matches("[0-9,]")) {
-                curNum = "";
                 activity.setCalculationText(buttonTxt, true);
                 calculate(activity.getCalculationText());
-            } else {
+            } else if (!lastChar.equals("=")) {
                 String newTxt = activity.getCalculationText().substring(0, activity.getCalculationText().length() - 1) + buttonTxt;
                 activity.setCalculationText(newTxt, false);
             }
@@ -63,24 +55,28 @@ public class Utils {
     }
 
     // Responds to clicking C-button
-    public void cClicked() {
+    void cClicked() {
         String lastChar;
 
         reset();
         if (activity.getCalculationText().length() > 0) {
             lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length() - 1));
-            if (lastChar.matches("[0-9,]") && curNum.length()>0) curNum = curNum.substring(0, curNum.length() - 1);
-            if (activity.getCalculationText().length()>0)
+            if (lastChar.matches("[0-9,]") && curNum.length() > 0)
+                curNum = curNum.substring(0, curNum.length() - 1);
+            if (activity.getCalculationText().length() > 0)
                 activity.setCalculationText(activity.getCalculationText().substring(0, activity.getCalculationText().length() - 1), false);
-            if (activity.getCalculationText().length()>0)
+            if (activity.getCalculationText().length() > 0)
                 calculate(activity.getCalculationText());
             else activity.setResultText("");
         }
     }
 
     // Resets the view if needed
-    void reset() {
-        if (calculated) {
+    private void reset() {
+        String lastChar = "";
+        if (activity.getCalculationText().length()>0)
+            lastChar = String.valueOf(activity.getCalculationText().charAt(activity.getCalculationText().length()-1));
+        if (calculated && lastChar.matches("[0-9,]")) {
             calculated = false;
             activity.setCalculationText("", false);
         } else calculated = false;
@@ -89,22 +85,27 @@ public class Utils {
     // Calculates the actual calculation
     private void calculate(String calculate) {
         String lastChar = String.valueOf(calculate.charAt(calculate.length() - 1));
-        NumberFormat nf = new DecimalFormat("##.###################");
+        NumberFormat nf = new DecimalFormat("##.########");
 
         calculate = calculate.replace(',', '.');
         calculate = calculate.replace('x', '*');
         calculate = calculate.replace("=", "");
 
-        if (lastChar.matches("[0-9,=]")) {
+        if (lastChar.matches("[1-9,]")) {
             Expression e = new ExpressionBuilder(calculate).build();
             double resolved = e.evaluate();
             activity.setResultText(String.valueOf(nf.format(resolved)));
-
-            if (lastChar.equals("=")) {
+        } else if (lastChar.equals("=")) {
+            if (curNum.length() > 0) {
+                Expression e = new ExpressionBuilder(calculate).build();
+                double resolved = e.evaluate();
                 activity.setResultText("");
                 activity.setCalculationText(String.valueOf(nf.format(resolved)), false);
                 calculated = true;
+            } else {
+                activity.setCalculationText(activity.getCalculationText().replace("=", ""), false);
+                activity.createToast("Can't divide by 0!");
             }
-        }
+        } else curNum = "";
     }
 }
