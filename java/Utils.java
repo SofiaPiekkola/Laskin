@@ -1,5 +1,3 @@
-package com.sofia.laskin2;
-
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
@@ -97,21 +95,19 @@ class Utils {
         calculate = calculate.replace('x', '*');
         calculate = calculate.replace("=", "");
 
-        if (lastChar.matches("[1-9,]")) {
+        try {
             Expression e = new ExpressionBuilder(calculate).build();
             double resolved = e.evaluate();
-            activity.setResultText(String.valueOf(nf.format(resolved)));
-        } else if (lastChar.equals("=")) {
-            try{
-                Expression e = new ExpressionBuilder(calculate).build();
-                double resolved = e.evaluate();
+            if (lastChar.equals("=")) {
                 activity.setResultText("");
                 activity.setCalculationText(String.valueOf(nf.format(resolved)), false);
                 calculated = true;
-            }catch (ArithmeticException e){
+            } else activity.setResultText(String.valueOf(nf.format(resolved)));
+        } catch (ArithmeticException | IllegalArgumentException e) {
+            if (lastChar.equals("=")) {
                 activity.setCalculationText(activity.getCalculationText().replace("=", ""), false);
                 activity.createToast("Cant divide with 0!");
-            }
-        } else curNum = "";
+            } else curNum = "";
+        }
     }
 }
