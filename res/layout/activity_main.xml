@@ -14,12 +14,11 @@
         android:layout_weight="17">
         <TextView
             android:padding="10dp"
-            android:textSize="@dimen/textSizeBig"
+            android:textSize="50sp"
             android:layout_gravity="end"
             android:textAlignment="textEnd"
             android:maxLines = "1"
             android:id="@+id/mid"
-            android:freezesText="true"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
     </HorizontalScrollView>
@@ -31,12 +30,11 @@
         android:layout_weight="13">
         <TextView
             android:padding="10dp"
-            android:textSize="@dimen/textSizeSmall"
+            android:textSize="30sp"
             android:layout_gravity="end"
             android:textAlignment="textEnd"
             android:id="@+id/con"
             android:maxLines = "1"
-            android:freezesText="true"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
     </HorizontalScrollView>
