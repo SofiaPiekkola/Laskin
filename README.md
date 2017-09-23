@@ -39,7 +39,7 @@ ________________________________________________________________________________
 - Vinkki 1: Toastin ensimmäinen parametri on this, toinen on viesti ja kolmas on pituus, Toast.LENGTH_SHORT. 
 - Vinkki 2: Muista lisätä loppuun .show() kutsu
 ________________________________________________________________________________________________________________________________________
-18) Luo metodi getCalculationText joka palauttaa ylemmän tekstikentän laskukaavan String-muodossa
+18) Luo metodi getCalculationText joka palauttaa ylemmän tekstikentän tekstin String-muodossa
 ________________________________________________________________________________________________________________________________________
 19) Luo metodi setResultText joka ottaa parametrina vastaan String-muodossa tekstin
 20) Aseta parametrina saatu teksti toiseen tekstikenttään, joka näyttää laskun tuloksen
