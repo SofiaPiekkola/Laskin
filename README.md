@@ -19,7 +19,9 @@ ________________________________________________________________________________
 - Vinkki: muuttuja = new Utils(this)
 13) Alusta myös luomasi TextView muuttujat käyttämällä metodia findViewById(R.id.antamasiId)
 - Vinkki: Muista tyyppimuunnos, esim Pylly p = (Pylly) findViewById(R.id.munpylly);
-14) Lisää onCreate metodiin myös lauseke: calculation.setMovementMethod(new ScrollingMovementMethod());
+14) Lisää onCreate metodiin myös lausekkeet: 
+- ylemmänTekstikentänNimi.setMovementMethod(new ScrollingMovementMethod());
+- alemmanTekstikentänNimi.setMovementMethod(new ScrollingMovementMethod());
 ________________________________________________________________________________________________________________________________________
 15) Täytä Layoutin avulla luodut metodit
 - kun käyttäjä painaa numeroa, lähetä utils-luokan numberClicked metodille painikkeesta saatava teksti String-muodossa
