@@ -30,7 +30,7 @@ ________________________________________________________________________________
 - kun käyttäjä painaa c-näppäintä, kutsu utils-luokan cClicked metodia
 HUOM:
 - Vinkki 1: Luo Button muuttuja ja alusta se käyttämällä findViewById(view.getId()) metodia.
-- Vinkki 2: Luo String muuttuja ja etsi painikkeen teksti käyttämällä metodia muuttuja.getText(). Muista myös tyyppimuunnos Stringiksi toString() metodilla.
+- Vinkki 2: Luo String muuttuja ja etsi painikkeen teksti käyttämällä metodia buttonMuuttuja.getText(). Muista myös tyyppimuunnos Stringiksi toString() metodilla.
 - Vinkki 3: Lähetä: utilsMuuttujasiNimi.utilsMuuttujanMetodi(ButtonistaSaatuTeksti);
 ________________________________________________________________________________________________________________________________________
 16) Luo metodi nimeltä createToast joka ottaa String muodossa vastaan näytettävän viestin
