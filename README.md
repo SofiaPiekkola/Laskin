@@ -43,11 +43,11 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________________
 19) Luo metodi setResultText joka ottaa parametrina vastaan String-muodossa tekstin
 20) Aseta parametrina saatu teksti toiseen tekstikenttään, joka näyttää laskun tuloksen
-21) Lisää metodiin myös lauseke: scroll2.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+21) Lisää metodiin myös lauseke: toinenScrollViewMuuttuja.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
 ________________________________________________________________________________________________________________________________________
 22) Luo metodi setCalculationText joka ottaa parametreina String-muotoisen laskukaavan ja booleanina tiedon siitä, lisätäänkö tekstiä vai muutetaanko se kokonaan
 23) Jos boolean arvo on tosi, lisää teksti ensimmäiseen tekstikenttään käyttämällä metodia append(laskukaava)
 24) Jos boolean arvo on epätosi aseta teksti ensimmäiseen tekstikenttään käyttämällä metodia setText(laskukaava)
-25) Lisää metodiin myös lauseke scroll1.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+25) Lisää metodiin myös lauseke ensimmäinenScrollViewMuuttuja.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
 ________________________________________________________________________________________________________________________________________
 Olet nyt valmis! Lataa laskin kännykkääsi ja testaa.
