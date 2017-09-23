@@ -15,7 +15,8 @@ ________________________________________________________________________________
 10) Luo Utils-tyyppinen muuttuja Utils-luokan käyttöä varten
 11) Luo 2 HorizontalScrollView tyyppistä muuttujaa tekstikenttien scrollauksien käyttöä varten
 ________________________________________________________________________________________________________________________________________
-12) OnCreate metodissa alusta Utils-luokka ja lähetä sinne parametrina this (=new Utils(this))
+12) OnCreate metodissa alusta Utils-luokka ja lähetä sinne parametrina this 
+- Vinkki: muuttuja = new Utils(this)
 13) Alusta myös luomasi muuttujat käyttämällä metodia findViewById(R.id.antamasiId)
 - Vinkki: Muista tyyppimuunnos, esim Pylly p = (Pylly) findViewById(R.id.munpylly);
 14) Lisää onCreate metodiin myös lauseke: calculation.setMovementMethod(new ScrollingMovementMethod());
