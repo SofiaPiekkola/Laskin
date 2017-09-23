@@ -17,7 +17,7 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________________
 12) OnCreate metodissa alusta Utils-luokka ja lähetä sinne parametrina this 
 - Vinkki: muuttuja = new Utils(this)
-13) Alusta myös luomasi muuttujat käyttämällä metodia findViewById(R.id.antamasiId)
+13) Alusta myös luomasi TextView muuttujat käyttämällä metodia findViewById(R.id.antamasiId)
 - Vinkki: Muista tyyppimuunnos, esim Pylly p = (Pylly) findViewById(R.id.munpylly);
 14) Lisää onCreate metodiin myös lauseke: calculation.setMovementMethod(new ScrollingMovementMethod());
 ________________________________________________________________________________________________________________________________________
