@@ -28,7 +28,7 @@ ________________________________________________________________________________
 - kun käyttäjä painaa pilkkua, lähetä utils-luokan commaClicked metodille painikkeesta saatava teksti String-muodossa
 - kun käyttäjä painaa +-*/ tai =-merkkiä, lähetä utils-luokan calculationClicked metodille painikkeesta saatava teksti String-muodossa
 - kun käyttäjä painaa c-näppäintä, kutsu utils-luokan cClicked metodia
----->>>> HUOM:
+HUOM:
 - Vinkki 1: Luo Button muuttuja ja alusta se käyttämällä findViewById(view.getId()) metodia.
 - Vinkki 2: Luo String muuttuja ja etsi painikkeen teksti käyttämällä metodia buttonMuuttuja.getText(). Muista myös tyyppimuunnos Stringiksi toString() metodilla.
 - Vinkki 3: Lähetä: utilsMuuttujasiNimi.utilsMuuttujanMetodi(ButtonistaSaatuTeksti);
