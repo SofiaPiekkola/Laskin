@@ -11,9 +11,9 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________________
 8) Aloitetaan koodi! Muokkaat tässä ainoastaan MainActivity-luokkaa ja kaikki ohjeet koskevat sitä.
 ________________________________________________________________________________________________________________________________________
-9) Luo 2 TextView-tyyppistä muuttujaa tekstikenttiä varten
-10) Luo Utils-tyyppinen muuttuja Utils-luokan käyttöä varten
-11) Luo 2 HorizontalScrollView tyyppistä muuttujaa tekstikenttien scrollauksien käyttöä varten
+9) Luo 2 TextView-tyyppistä muuttujaa tekstikenttiä varten. Nimeä muuttujat calculation ja result
+10) Luo Utils-tyyppinen muuttuja Utils-luokan käyttöä varten. Nimeä muuttuja utils
+11) Luo 2 HorizontalScrollView tyyppistä muuttujaa tekstikenttien scrollauksien käyttöä varten. Nimeä muuttujat scroll1 ja scroll2
 ________________________________________________________________________________________________________________________________________
 12) OnCreate metodissa alusta Utils-luokka ja lähetä sinne parametrina this 
 - Vinkki: utilsMuuttujanNimi = new Utils(this)
