@@ -17,7 +17,7 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________________
 12) OnCreate metodissa alusta Utils-luokka ja lähetä sinne parametrina this 
 - Vinkki: utilsMuuttujanNimi = new Utils(this)
-13) Alusta myös muut luomasi muuttujat käyttämällä metodia findViewById(R.id.antamasiId)
+13) Alusta myös muut luomasi muuttujat käyttämällä metodia findViewById(R.id.layoutissaAntamasiId)
 - Vinkki: Muista tyyppimuunnos, esim Pylly pyllyni = (Pylly) findViewById(R.id.munpylly);
 14) Lisää onCreate metodiin myös lausekkeet: 
 - ylemmänTekstikentänNimi.setMovementMethod(new ScrollingMovementMethod());
