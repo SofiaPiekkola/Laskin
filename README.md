@@ -45,4 +45,10 @@ ________________________________________________________________________________
 24) Jos boolean arvo on epätosi aseta teksti ensimmäiseen tekstikenttään käyttämällä metodia setText(laskukaava)
 25) Lisää metodiin myös lauseke ylempiScrollViewMuuttuja.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
 ________________________________________________________________________________________________________________________________________
+
+Luo metodi nimeltä createToast joka ottaa String muodossa vastaan näytettävän viestin
+Näytä toast-viesti käyttäjälle kutsumalla Toast.makeText metodia. Metodi ottaa vastaan 3 parametria.
+Vinkki 1: Toastin ensimmäinen parametri on this, toinen on viesti ja kolmas on pituus, Toast.LENGTH_SHORT.
+Vinkki 2: Muista lisätä loppuun .show() kutsu
+
 Olet nyt valmis! Lataa laskin kännykkääsi ja testaa.
