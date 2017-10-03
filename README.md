@@ -1,10 +1,5 @@
 # Laskin
 
-1) Etsi projektisi kansio app/libs ja lataa sinne Githubin Laskin-kansiosta löytyvä exp4j-0.4.8.jar
-2) Android Studiossa avaa navigaatio-valikko (vasemmalla ylhäällä, oletuksena siinä lukee Android) ja valitse Project
-3) Navigoi projektisi app/libs kansioon, klikkaa oikealla hiiren näppäimellä lataamaasi jar-tiedostoa ja valitse Add as Library...
-________________________________________________________________________________________________________________________________________
-4) Palaa takaisin Androidiin navigaatio-valikosta (kts. kohta 4)
 5) Luo uusi Utils-niminen java-tiedosto samaan kansioon MainActivity java-tiedoston kanssa
 6) Poista Utilsista kaikki muu teksti paitsi ensimmäiseltä riviltä löytyvä paketin osoite
 7) Kopioi Utils-luokkaan kaikki koodi Githubin Laskin/java kansiosta löytyvästä Utils.java tiedostosta, älä välitä virheistä
