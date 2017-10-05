@@ -4,50 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sofia.laskin2.MainActivity"
+    tools:context="com.sofia.tissi.MainActivity"
     android:orientation="vertical">
 
     <HorizontalScrollView
         android:id="@+id/scroll1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="17">
+        android:layout_weight="17"
+        android:layout_height="0dp">
         <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
             android:padding="10dp"
             android:textSize="50sp"
             android:layout_gravity="end"
             android:textAlignment="textEnd"
             android:maxLines = "1"
-            android:id="@+id/mid"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:id="@+id/mid"/>
     </HorizontalScrollView>
 
     <HorizontalScrollView
         android:id="@+id/scroll2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="13">
+        android:layout_weight="13"
+        android:layout_height="0dp">
         <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
             android:padding="10dp"
             android:textSize="30sp"
             android:layout_gravity="end"
             android:textAlignment="textEnd"
-            android:id="@+id/con"
             android:maxLines = "1"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:id="@+id/con" />
     </HorizontalScrollView>
 
     <LinearLayout
-        android:baselineAligned="false"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="70">
+        android:baselineAligned="false"
+        android:layout_weight="70"
+        android:layout_height="0dp">
 
         <TableLayout
-            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_width="0dp"
             android:layout_weight="80">
             <TableRow
                 android:layout_height="0dp"
@@ -72,9 +72,10 @@
                     style="@style/buttonStyle" />
             </TableRow>
 
+
             <TableRow
-                android:layout_height="0dp"
                 android:layout_weight="25"
+                android:layout_height="0dp"
                 android:stretchColumns="3">
 
                 <Button
@@ -96,10 +97,9 @@
                     style="@style/buttonStyle"/>
 
             </TableRow>
-
             <TableRow
-                android:layout_height="0dp"
                 android:layout_weight="25"
+                android:layout_height="0dp"
                 android:stretchColumns="3">
 
                 <Button
@@ -121,9 +121,10 @@
                     style="@style/buttonStyle" />
             </TableRow>
 
+
             <TableRow
-                android:layout_height="0dp"
                 android:layout_weight="25"
+                android:layout_height="0dp"
                 android:stretchColumns="3">
 
                 <Button
@@ -144,12 +145,12 @@
                     android:onClick="calculationClicked"
                     style="@style/buttonStyle" />
             </TableRow>
-
         </TableLayout>
+
         <LinearLayout
-            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="20"
+            android:layout_width="0dp"
             android:orientation="vertical">
             <Button
                 android:id="@+id/numC"
@@ -180,7 +181,6 @@
                 android:text="/"
                 android:onClick="calculationClicked"
                 style="@style/buttonStyle2" />
-
         </LinearLayout>
 
     </LinearLayout>
