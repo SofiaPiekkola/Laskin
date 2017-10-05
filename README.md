@@ -41,17 +41,27 @@ ________________________________________________________________________________
 19) Lisää metodiin myös lauseke ylempiScrollViewMuuttuja.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
 ________________________________________________________________________________________________________________________________________
 20) EXTRA: 
+
 a) Luo metodi nimeltä createToast joka ottaa String muodossa vastaan näytettävän viestin
+
 b) Näytä toast-viesti käyttäjälle kutsumalla Toast.makeText metodia. Metodi ottaa vastaan 3 parametria.
+
 - Vinkki 1: Toastin ensimmäinen parametri on this, toinen on viesti ja kolmas on pituus, Toast.LENGTH_SHORT. 
+
 - Vinkki 2: Muista lisätä loppuun .show() kutsu
 ________________________________________________________________________________________________________________________________________
 21) EXTRA2:
+
 a) Etsi tai tee hieno kuvake ohjelmallesi
+
 b) Navigoi Windowsilla kansioon <projektisi>\app\src\main\res
+
 - Vinkki: Polun näet Android Studion yläreunasta
+
 c) Löydät kasan kansioita, jotka alkavat tekstillä "mipmap". Nämä kansiot sisältävät eri kokoisissa laitteissa käytettäviä ikoneita. Kuvat näyttävät samalta, mutta ovat todellisuudessa eri kokoisia.
+
 d) Kopioi haluamasi kuva jokaiseen kansioon korvaten sillä ic_launcher_round ja ic_launcher tiedostot.
+
 - Vinkki: Älä muuta kuvien "Android-nimiä", sillä niiden avulla Android löytää kuvat.
 ________________________________________________________________________________________________________________________________________
 Olet nyt valmis! Lataa laskin kännykkääsi ja testaa.
