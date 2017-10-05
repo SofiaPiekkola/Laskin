@@ -2,7 +2,7 @@
 
 1) Luo uusi Utils-niminen java-tiedosto samaan kansioon MainActivity java-tiedoston kanssa
 2) Poista Utilsista kaikki muu teksti paitsi ensimmäiseltä riviltä löytyvä paketin osoite
-3) Kopioi Utils-luokkaan kaikki koodi Githubin Laskin/java kansiosta löytyvästä Utils.java tiedostosta, älä välitä virheistä
+3) Kopioi Utils-luokkaan kaikki koodi Githubista löytyvästä Utils.java tiedostosta, älä välitä virheistä
 ________________________________________________________________________________________________________________________________________
 4) Aloitetaan koodi! Muokkaat tässä ainoastaan MainActivity-luokkaa ja kaikki ohjeet koskevat sitä.
 ________________________________________________________________________________________________________________________________________
