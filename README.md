@@ -47,7 +47,6 @@ b) Näytä toast-viesti käyttäjälle kutsumalla Toast.makeText metodia. Metodi
 - Vinkki 2: Muista lisätä loppuun .show() kutsu
 ________________________________________________________________________________________________________________________________________
 21) EXTRA2:
-
 a) Etsi tai tee hieno kuvake ohjelmallesi
 b) Navigoi Windowsilla kansioon <projektisi>\app\src\main\res
 - Vinkki: Polun näet Android Studion yläreunasta
