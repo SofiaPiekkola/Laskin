@@ -54,7 +54,7 @@ ________________________________________________________________________________
 
 a) Etsi tai tee hieno kuvake ohjelmallesi
 
-b) Navigoi Windowsilla kansioon <projektisi>\app\src\main\res
+b) Navigoi Windowsilla kansioon projektisi\app\src\main\res
 
 - Vinkki: Polun näet Android Studion yläreunasta
 
